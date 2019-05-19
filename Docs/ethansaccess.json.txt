@@ -1,0 +1,39 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1549771250887",
+      "Action": "s3:*",
+      "Effect": "Allow",
+      "Resource": ["arn:aws:s3:::ethans-jan-19-kumar","arn:aws:s3:::ethans-jan-19-kumar/*"]
+    },
+    {
+      "Sid": "Stmt1549771312469",
+      "Action": [
+        "s3:DeleteObject"
+      ],
+      "Effect": "Deny",
+      "Resource": "arn:aws:s3:::ethans-jan-19-kumar/*"
+    }
+  ]
+}
+
+
+
+
+
+C:\Users\Kumar>aws iam create-policy --policy-name s3-bucket-access-web --policy-document file://E:\aws\ethansaccess.json.txt
+{
+    "Policy": {
+        "PolicyName": "s3-bucket-access-web",
+        "PolicyId": "ANPAJRXFHXUNRGATCNSDA",
+        "Arn": "arn:aws:iam::339376520003:policy/s3-bucket-access-web",
+        "Path": "/",
+        "DefaultVersionId": "v1",
+        "AttachmentCount": 0,
+        "PermissionsBoundaryUsageCount": 0,
+        "IsAttachable": true,
+        "CreateDate": "2019-02-10T04:17:51Z",
+        "UpdateDate": "2019-02-10T04:17:51Z"
+    }
+}
